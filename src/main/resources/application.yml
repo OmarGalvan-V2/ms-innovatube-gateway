@@ -8,6 +8,7 @@ spring:
           '[/**]':
             allowedOriginPatterns:
               - "http://localhost:4200"
+              - "https://innovatubeweb.netlify.app"
             allowedMethods:
               - GET
               - POST
@@ -26,7 +27,7 @@ spring:
           predicates:
             - Path=/jwt/**
 server:
-  port: 8080
+  port: 8090
 
 eureka:
   client:
