@@ -32,6 +32,6 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: https://ms-innovatube-eureka-server.onrender.com/eureka
+      defaultZone: https://ms-innovatube-eureka-server.onrender.com/
   instance:
     prefer-ip-address: true
