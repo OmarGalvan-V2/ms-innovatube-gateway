@@ -1,0 +1,67 @@
+# Version control
+.git/
+.gitignore
+.gitattributes
+
+# IDE and editor files
+.idea/
+.vscode/
+.settings/
+.project
+.classpath
+*.swp
+*.swo
+
+# Build outputs
+/target/
+dist/
+build/
+out/
+
+# Java build artifacts
+*.class
+
+# Test sources and outputs
+# (Do not ignore src/test/ if tests are needed in the image)
+# test/
+# tests/
+
+# Logs and debug
+*.log
+debug/
+
+# Temporary files
+*.tmp
+tmp/
+temp/
+
+# Documentation
+*.md
+README*
+HELP.md
+
+# Environment and secrets
+.env*
+*.env
+*.pem
+*.key
+*.crt
+config.local.*
+*.local.yml
+
+# Miscellaneous
+*.prefs
+*.properties
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Exclude Docker-related files from being ignored
+!Dockerfile*
+!docker-compose*
+
+# Exclude Maven wrapper and config (do not ignore)
+# !.mvnw
+# !.mvnw.cmd
+# !.mvn/
