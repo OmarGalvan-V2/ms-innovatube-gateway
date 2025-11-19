@@ -27,7 +27,7 @@ spring:
           predicates:
             - Path=/jwt/**
 server:
-  port: 8090
+  port: ${PORT:8090}
 
 eureka:
   client:
