@@ -1,20 +1,6 @@
 spring:
   cloud:
     gateway:
-      routes:
-        # RUTA 1: Servicio de Usuarios
-        - id: innovatube-usuarios
-          uri: lb://innovatube-usuarios
-          predicates:
-            - Path=/Usuarios/**
-            
-        # RUTA 2: Servicio JWT
-        - id: innovatube-jwt
-          uri: lb://innovatube-jwt
-          predicates:
-            - Path=/jwt/**
-
-      # CORS (Centralizado)
       globalcors:
         cors-configurations:
           '[/**]':
@@ -29,3 +15,14 @@ spring:
               - OPTIONS
             allowedHeaders: "*"
             allowCredentials: true
+            
+      routes:
+        - id: innovatube-usuarios
+          uri: lb://innovatube-usuarios
+          predicates:
+            - Path=/Usuarios/**
+            
+        - id: jwt-service
+          uri: lb://innovatube-jwt
+          predicates:
+            - Path=/jwt/**
